@@ -1,0 +1,13 @@
+.sample img{
+    width: 400px;
+    padding: 5px;
+}
+input {
+    border: 1px solid black;
+}
+input, button{
+    height: 50px;
+}
+/* .associates img{
+    width: 30px;
+} */
