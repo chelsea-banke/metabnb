@@ -1,3 +1,60 @@
 footer div div {
     padding: 5px;
 }
+#menu-btn{
+    display: none;
+}
+header button{
+    display: inline;
+}
+#close{
+    display: none;
+}
+@media screen and (max-width: 830px) {
+    #menu-btn{
+        display: inline;
+        width: 50px;
+    }
+    #menu{
+        position: absolute;
+        display: block;
+        width: 100vw;
+        background-color: rgb(58, 58, 58);
+        padding: 10px;
+        left: 0px;
+        color: white;
+    }
+    #menu div{
+        padding: 10px;
+        margin-left: 25px;
+    }
+    #close{
+        position: absolute;
+        display: block;
+        top: 20px;
+        right: 20px;
+    }
+    .drop{
+        animation: drop 1.5s;
+        top: 0px;
+    }
+    .drag {
+        animation: drag 1.5s;
+        top: -500px;
+    }
+}
+@media screen and (max-width: 550px) {
+    #wallet-btn{
+        font-size: small !important;
+        height: 40px;
+        margin-top: 5px;
+    }
+}
+@keyframes drop {
+    0%{top: -500px;}
+    100%{top: 0px;}
+}
+@keyframes drag {
+    0%{top: 0px;}
+    100%{top: -500px;}
+}

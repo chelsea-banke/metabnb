@@ -8,6 +8,8 @@ input {
 input, button{
     height: 50px;
 }
-/* .associates img{
-    width: 30px;
-} */
+@media screen and (max-width: 1000px) {
+    .associates img{
+        width: 25%;
+    }
+}

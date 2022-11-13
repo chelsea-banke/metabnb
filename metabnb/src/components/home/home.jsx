@@ -31,17 +31,17 @@ function Home (){
             </div>
             <div className='mt-10'>
                 <h2 className='text-center text-3xl font-semibold'>Inspiration for your new adventures</h2>
-                <div className='flex flex-row flex-wrap justify-evenly p-10'>
+                <div className='flex flex-row flex-wrap justify-evenly p-10 max-[407px]:p-0 max-[407px]:pt-10'>
                     {[0, 0, 0, 0, 0, 0, 0, 0].map(i => <NFT/>)}
                 </div>
             </div>
-            <div className='flex flex-row bg-pink-700 text-white p-20 pt-10'>
+            <div className='flex flex-row bg-pink-700 text-white p-20 pt-10 max-[900px]:block max-[413px]:p-10' >
                 <div className='mt-20'>
                     <h2 className='font-semibold text-4xl'>Metabnb NFT's</h2>
                     <p className='text-xl mt-10'>Discover our NFT gift cards collection. Loyal customers gets amazing gift cards which are traded as NFTs. These NFTs gives our cutomer access to loads of our exclusive services.</p>
                     <button className='bg-white text-pink-700 p-4 pb-10 mt-10 rounded-lg'>Learn more</button>
                 </div>
-                <img src='assets/bnb.png' className='w-1/2'/>
+                <img src='assets/bnb.png' className='w-1/2 max-[900px]:w-screen' />
             </div>
         </div>
     )

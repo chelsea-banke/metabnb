@@ -4,3 +4,15 @@
 .NFT{
     font-size: small;
 }
+@media screen and (max-width: 615px) {
+    .nft {
+        width: 145px;
+        margin: auto;
+    }
+    .NFT{
+        word-wrap: wrap;
+    }
+    .NFT .flex{
+        display: block !important;
+    }
+}
