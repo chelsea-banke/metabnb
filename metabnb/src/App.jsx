@@ -39,7 +39,10 @@ function App() {
           }}><img src='icons/close.svg'/></button>
         </div>
         <div className='flex'>
-          <button className='bg-pink-700 text-white p-3 rounded-lg font-semibold max-[550px]:p-2' id='wallet-btn' onClick={() => {document.getElementById('modal-overlay').style.display = 'block'}}>Connnect Wallet</button>
+          <button className='bg-pink-700 text-white p-3 rounded-lg font-semibold max-[550px]:p-2' id='wallet-btn' onClick={() => {
+            document.getElementById('modal-overlay').style.display = 'block'
+            document.body.style.overflowY = 'hidden'
+            }}>Connnect Wallet</button>
           <button id='menu-btn' onClick={() => {
               let elm = document.getElementById('menu');
               if (elm.classList.contains('drop')){
@@ -97,7 +100,10 @@ function App() {
           <div className='modal bg-white p-10 pb-10 rounded-lg'>
             <div className='modal-head flex flex-row  justify-between  border-b-2'>
               <div className='modal-title text-xl font-semibold'>Connect Wallet</div>
-              <button className='modal-close' onClick={() => {document.getElementById('modal-overlay').style.display = 'none'}}><img src='icons/cancel.svg'/></button>
+              <button className='modal-close' onClick={() => {
+                document.getElementById('modal-overlay').style.display = 'none'
+                document.body.style.overflowY = 'scroll'
+                }}><img src='icons/cancel.svg'/></button>
             </div>
             <div className='modal-body mt-5'>
               <p>Choose your prefered wallet</p>
