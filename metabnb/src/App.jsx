@@ -9,11 +9,23 @@ function App() {
     <div className="App">
       <header className='flex flex-row flex-wrap justify-between w-screen p-5 px-9 fixed top-0 max-[750px]:p-1 max-[750px]:pt-5'>
         <div className='max-[550px]:w-1/3'><img src='icons/logo.png' className='max-[550px]:mt-4'/></div>
-        <div className='flex flex-row flex-wrap justify-evenly w-1/2 mt-2 drag' id='menu'>
-          <div><Link to='/'>Home</Link></div>
-          <div><Link to='/places'>Place to stay</Link></div>
-          <div>NFT's</div>
-          <div>Communities</div>
+        <div className='flex flex-row flex-wrap justify-evenly w-1/2 mt-2 drag' id='menu' onClick={(e) => {
+          if (e.target.classList.contains('link')){
+            let elm = document.getElementById('menu');
+            if (elm.classList.contains('drop')){
+                elm.classList.remove('drop')
+                elm.classList.add('drag')
+            }
+            else {
+              elm.classList.remove('drag')
+              elm.classList.add('drop')
+            }
+          }
+        }}>
+          <Link to='/'><div className='link'>Home</div></Link>
+          <Link to='/places'><div className='link'>Place to stay</div></Link>
+          <Link to='/'><div className='link'>NFT's</div></Link>
+          <Link to='/'><div className='link com'>Communities</div></Link>
           <button id='close' onClick={()=>{
             let elm = document.getElementById('menu');
             if (elm.classList.contains('drop')){
@@ -24,7 +36,7 @@ function App() {
               elm.classList.remove('drag')
               elm.classList.add('drop')
             }  
-          }}><img src='icons/close.png'/></button>
+          }}><img src='icons/close.svg'/></button>
         </div>
         <div className='flex'>
           <button className='bg-pink-700 text-white p-3 rounded-lg font-semibold max-[550px]:p-2' id='wallet-btn' onClick={() => {document.getElementById('modal-overlay').style.display = 'block'}}>Connnect Wallet</button>

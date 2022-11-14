@@ -3,7 +3,7 @@ import './places.css'
 
 function Places(){
     return(
-        <div className="PLACES">
+        <div className="Places">
             <div className="flex flex-row justify-evenly w-screen pl-10 pr-20 mt-10 max-[830px]:text-sm max-[750px]:block max-[750px]:p-1">
                 <div className="flex flex-row flex-wrap justify-evenly w-11/12 max-[750px]:hidden">
                     <div>Resturant</div>
