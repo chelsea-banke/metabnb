@@ -1,3 +1,10 @@
+header{
+    background-color: rgba(255, 255, 255, 0.719);
+    backdrop-filter: blur(80px);
+}
+section{
+    margin-top: 100px;
+}
 footer div div {
     padding: 5px;
 }
@@ -9,6 +16,22 @@ header button{
 }
 #close{
     display: none;
+}
+.modal-overlay{
+    background-color: rgba(87, 87, 87, 0.247);
+}
+.modal{
+    width: 90vw;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+    animation: modal-drop 1s;
+}
+.modal-close img{
+    margin-top: -25px;
+}
+.modal-body button{
+    padding-bottom: 50px;
 }
 @media screen and (max-width: 830px) {
     #menu-btn{
@@ -57,4 +80,14 @@ header button{
 @keyframes drag {
     0%{top: 0px;}
     100%{top: -500px;}
+}
+@keyframes modal-drop {
+    0%{
+        margin-top: -50px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 50px;
+        opacity: 1;
+    }
 }
