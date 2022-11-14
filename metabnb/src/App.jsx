@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <header className='flex flex-row flex-wrap justify-between w-screen p-5 px-9 fixed top-0 max-[750px]:p-1 max-[750px]:pt-5'>
+      <header className='flex flex-row flex-wrap justify-between w-screen p-5 px-9 fixed top-0 max-[750px]:p-1 max-[750px]:pt-3'>
         <div className='max-[550px]:w-1/3'><img src='icons/logo.png' className='max-[550px]:mt-4'/></div>
         <div className='flex flex-row flex-wrap justify-evenly w-1/2 mt-2 drag' id='menu' onClick={(e) => {
           if (e.target.classList.contains('link')){

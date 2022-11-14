@@ -4,3 +4,8 @@
 .settings-btn{
     margin-top: -10px;
 }
+@media screen and (max-width: 750px) {
+    .Places{
+        margin-top: 100px;
+    }
+}
