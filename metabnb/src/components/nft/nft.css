@@ -3,6 +3,7 @@
 }
 .NFT{
     font-size: small;
+    border-radius: 20px;
 }
 /* @media screen and (max-width: 615px) {
     .nft {
@@ -16,3 +17,12 @@
         display: block !important;
     }
 } */
+@media screen and (max-width: 615px) {
+    .nft {
+        width: 75vw;
+        margin: auto;
+    }
+    .nft img{
+        width: 100% !important;
+    }
+}
