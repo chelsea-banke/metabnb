@@ -1,15 +1,17 @@
 import { useState } from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
 import Home from './components/home/home'
+import Places from './components/places/places'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className='flex flex-row flex-wrap justify-between w-screen p-5 px-9'>
+      <header className='flex flex-row flex-wrap justify-between w-screen p-5 px-9 max-[750px]:p-1 max-[750px]:pt-5'>
         <div className='max-[550px]:w-1/3'><img src='icons/logo.png' className='max-[550px]:mt-4'/></div>
         <div className='flex flex-row flex-wrap justify-evenly w-1/2 mt-2 drag' id='menu'>
-          <div>Home</div>
-          <div>Place to stay</div>
+          <div><Link to='/'>Home</Link></div>
+          <div><Link to='/places'>Place to stay</Link></div>
           <div>NFT's</div>
           <div>Communities</div>
           <button id='close' onClick={()=>{
@@ -39,7 +41,10 @@ function App() {
           }}><img src='icons/menu.png'/></button>
         </div>
       </header>
-      <Home/>
+      <Routes>
+        <Route exact path='/' element={<Home/>}></Route>
+        <Route exact path='/places' element={<Places/>}></Route>
+      </Routes>
       <footer className='flex flex-row flex-wrap justify-between w-screen bg-gray-800 p-10 text-white'>
         <div>
           <div>

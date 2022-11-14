@@ -32,7 +32,7 @@ function Home (){
             <div className='mt-10'>
                 <h2 className='text-center text-3xl font-semibold'>Inspiration for your new adventures</h2>
                 <div className='flex flex-row flex-wrap justify-evenly p-10 max-[407px]:p-0 max-[407px]:pt-10'>
-                    {[0, 0, 0, 0, 0, 0, 0, 0].map(i => <NFT/>)}
+                    {[0, 1, 2, 3, 4, 5, 6, 7].map(i => <NFT url={'nfts/nft'+i+'.png'}/>)}
                 </div>
             </div>
             <div className='flex flex-row bg-pink-700 text-white p-20 pt-10 max-[900px]:block max-[413px]:p-10' >

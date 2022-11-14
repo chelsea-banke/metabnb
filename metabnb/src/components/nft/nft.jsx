@@ -1,8 +1,8 @@
 import './nft.css'
-function NFT(){
+function NFT(props){
     return(
         <div className="p-2 border border-gray-600 w-fit rounded-lg mb-5 NFT">
-            <img src="assets/nft1.png" className="nft"/>
+            <img src={props.url} className="nft"/>
             <div className='flex flex-row justify-between p-1'>
                 <div>Deseart Kind</div>
                 <div className='font-semibold'>1MTB per night</div>
