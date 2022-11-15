@@ -7,9 +7,9 @@ function NFT(props){
                 <div>Deseart Kind</div>
                 <div className='font-semibold'>1MTB per night</div>
             </div>
-            <div className='flex flex-row justify-between p-1'>
-                <div>2345km away</div>
-                <div>available for 2weeks stay</div>
+            <div className='flex flex-row justify-between p-1 w-full'>
+                <div className='whitespace-nowrap'>2345km away</div>
+                <div className='text-right'>available for 2weeks stay</div>
             </div>
             <img src='icons/rating.svg' className='p-1'/>
         </div>

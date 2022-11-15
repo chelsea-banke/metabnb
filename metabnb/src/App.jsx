@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className='flex flex-row flex-wrap justify-between w-screen p-5 px-9 fixed top-0 max-[750px]:p-1 max-[750px]:pt-3'>
         <div className='max-[550px]:w-1/3'><img src='icons/logo.png' className='max-[550px]:mt-4'/></div>
-        <div className='flex flex-row flex-wrap justify-evenly w-1/2 mt-2 drag' id='menu' onClick={(e) => {
+        <div className='flex flex-row flex-wrap justify-evenly w-1/2 mt-4 drag' id='menu' onClick={(e) => {
           if (e.target.classList.contains('link')){
             let elm = document.getElementById('menu');
             if (elm.classList.contains('drop')){
@@ -63,7 +63,7 @@ function App() {
         </Routes>
       </section>
       <footer className='flex flex-row flex-wrap justify-between w-screen bg-gray-800 p-10 text-white'>
-        <div>
+        <div className='mt-5'>
           <div>
             <img src='icons/logo-foot.svg'/>
           </div>
@@ -72,23 +72,23 @@ function App() {
             <img src='icons/instagram.svg'/>
             <img src='icons/twitter.svg'/>
           </div>
-          <p className='mt-8'>2022 Metabnb</p>
+          <p className='mt-8'>©2022 Metabnb</p>
         </div>
-        <div>
+        <div className='mt-5'>
           <div className='font-semibold'>Community</div>
           <div>NFT</div>
           <div>Tokens</div>
           <div>Landlords</div>
           <div>Discord</div>
         </div>
-        <div>
+        <div className='mt-5'>
           <div className='font-semibold'>Places</div>
           <div>Castle</div>
           <div>Farms</div>
           <div>Beach</div>
           <div>Learn more</div>
         </div>
-        <div>
+        <div className='mt-5'>
           <div className='font-semibold'>About us</div>
           <div>Road map</div>
           <div>Creators</div>

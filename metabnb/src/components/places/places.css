@@ -8,6 +8,9 @@
     .Places{
         margin-top: 100px;
     }
+    .types{
+        margin: auto;
+    }
     .types div{
         padding: 5px;
     }
