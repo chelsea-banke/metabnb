@@ -15,7 +15,7 @@ function Places(){
                     <div>Off-Grid</div>
                     <div>Farm</div>
                 </div>
-                <div className="flex flex-row justify-between border border-gray-400 p-2 rounded-md max-[750px]:w-full max-[750px]:mt-5 settings-btn">
+                <div className="flex flex-row justify-between border border-gray-400 p-2 rounded-md max-[750px]:mt-3 settings-btn o">
                     <p>Location</p>
                     <img className="ml-5" src="icons/settings.svg"/>
                 </div>
