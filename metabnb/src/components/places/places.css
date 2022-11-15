@@ -14,4 +14,9 @@
     .types div{
         padding: 5px;
     }
+    .o{
+        margin: auto;
+        
+        width: 90vw;
+    }
 }
