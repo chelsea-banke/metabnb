@@ -5,55 +5,35 @@ import Places from './components/places/places'
 import './App.css'
 
 function App() {
+
+  function dropMenu(remove, add){
+    let elm = document.getElementById('menu') 
+    elm.classList.remove(remove)
+    elm.classList.add(add)
+  }
+  function dropModal(display, overflow){
+    document.getElementById('modal-overlay').style.display = display
+    document.body.style.overflowY = overflow
+  }
+  
   return (
     <div className="App">
       <header className='flex flex-row flex-wrap justify-between w-screen p-5 px-9 fixed top-0 max-[750px]:p-1 max-[750px]:pt-3'>
         <div className='max-[550px]:w-1/3'><img src='icons/logo.png' className='max-[550px]:mt-4'/></div>
         <div className='flex flex-row flex-wrap justify-evenly w-1/2 mt-4 drag' id='menu' onClick={(e) => {
           if (e.target.classList.contains('link')){
-            let elm = document.getElementById('menu');
-            if (elm.classList.contains('drop')){
-                elm.classList.remove('drop')
-                elm.classList.add('drag')
-            }
-            else {
-              elm.classList.remove('drag')
-              elm.classList.add('drop')
-            }
+            dropMenu('drop', 'drag')
           }
         }}>
           <Link to='/'><div className='link'>Home</div></Link>
           <Link to='/places'><div className='link'>Place to stay</div></Link>
           <Link to='/'><div className='link'>NFT's</div></Link>
           <Link to='/'><div className='link com'>Communities</div></Link>
-          <button id='close' onClick={()=>{
-            let elm = document.getElementById('menu');
-            if (elm.classList.contains('drop')){
-                elm.classList.remove('drop')
-                elm.classList.add('drag')
-            }
-            else {
-              elm.classList.remove('drag')
-              elm.classList.add('drop')
-            }  
-          }}><img src='icons/close.svg'/></button>
+          <button id='close' onClick={() => dropMenu('drop', 'drag')}><img src='icons/close.svg'/></button>
         </div>
         <div className='flex'>
-          <button className='bg-pink-700 text-white p-3 rounded-lg font-semibold max-[550px]:p-2' id='wallet-btn' onClick={() => {
-            document.getElementById('modal-overlay').style.display = 'block'
-            document.body.style.overflowY = 'hidden'
-            }}>Connnect Wallet</button>
-          <button id='menu-btn' onClick={() => {
-              let elm = document.getElementById('menu');
-              if (elm.classList.contains('drop')){
-                  elm.classList.remove('drop')
-                  elm.classList.add('drag')
-              }
-              else {
-                elm.classList.remove('drag')
-                elm.classList.add('drop')
-              }
-          }}><img src='icons/menu.png'/></button>
+          <button className='bg-pink-700 text-white p-3 rounded-lg font-semibold max-[550px]:p-2' id='wallet-btn' onClick={() => dropModal('block', 'hidden')}>Connnect Wallet</button>
+          <button id='menu-btn' onClick={() => dropMenu('drag', 'drop')}><img src='icons/menu.png'/></button>
         </div>
       </header>
       <section>
@@ -100,10 +80,7 @@ function App() {
           <div className='modal bg-white p-10 pb-10 rounded-lg'>
             <div className='modal-head flex flex-row  justify-between  border-b-2'>
               <div className='modal-title text-xl font-semibold'>Connect Wallet</div>
-              <button className='modal-close' onClick={() => {
-                document.getElementById('modal-overlay').style.display = 'none'
-                document.body.style.overflowY = 'scroll'
-                }}><img src='icons/cancel.svg'/></button>
+              <button className='modal-close' onClick={() => dropModal('none', 'scroll')}><img src='icons/cancel.svg'/></button>
             </div>
             <div className='modal-body mt-5'>
               <p>Choose your prefered wallet</p>
@@ -127,8 +104,5 @@ function App() {
       </div>
     </div>
   )
-}
-function toogle(){
-
 }
 export default App
